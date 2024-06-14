@@ -726,7 +726,7 @@ describe("Model DNA", function () {
     before(async function () {
 	this.timeout( 300_000 );
 
-	await holochain.install([
+	const installations		= await holochain.install([
 	    "alice", // admin
 	    "bobby", // constant member
 	    "carol", // member removed later
@@ -748,12 +748,23 @@ describe("Model DNA", function () {
 	    "logging": process.env.LOG_LEVEL || "fatal",
 	});
 
-	alice_client			= await client.app( "test-alice" );
-	bobby_client			= await client.app( "test-bobby" );
-	carol_client			= await client.app( "test-carol" );
-	david_client			= await client.app( "test-david" );
-	emily_client			= await client.app( "test-emily" );
-	felix_client			= await client.app( "test-felix" );
+	const alice_token		= installations.alice.test.auth.token;
+	alice_client			= await client.app( alice_token );
+
+	const bobby_token		= installations.bobby.test.auth.token;
+	bobby_client			= await client.app( bobby_token );
+
+	const carol_token		= installations.carol.test.auth.token;
+	carol_client			= await client.app( carol_token );
+
+	const david_token		= installations.david.test.auth.token;
+	david_client			= await client.app( david_token );
+
+	const emily_token		= installations.emily.test.auth.token;
+	emily_client			= await client.app( emily_token );
+
+	const felix_token		= installations.felix.test.auth.token;
+	felix_client			= await client.app( felix_token );
 
 	// Must call whoami on each cell to ensure that init has finished.
 	{

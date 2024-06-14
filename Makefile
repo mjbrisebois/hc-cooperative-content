@@ -144,11 +144,11 @@ clean-files-all:	clean-remove-chaff
 clean-files-all-force:	clean-remove-chaff
 	git clean -fdx
 
-PRE_HDIE_VERSION = whi_hdi_extensions = "0.6"
-NEW_HDIE_VERSION = whi_hdi_extensions = "0.7"
+PRE_HDIE_VERSION = whi_hdi_extensions = "0.7"
+NEW_HDIE_VERSION = whi_hdi_extensions = "0.8.1"
 
-PRE_HDKE_VERSION = whi_hdk_extensions = "0.6"
-NEW_HDKE_VERSION = whi_hdk_extensions = "0.7"
+PRE_HDKE_VERSION = whi_hdk_extensions = "0.7"
+NEW_HDKE_VERSION = whi_hdk_extensions = "0.8.1"
 
 GG_REPLACE_LOCATIONS = ':(exclude)*.lock' zomes/*/ *_types/ *_sdk/ tests/zomes
 

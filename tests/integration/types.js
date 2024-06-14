@@ -17,9 +17,7 @@ export const EntryCreationActionStruct = {
 	"App": {
 	    "entry_index":	Number,
 	    "zome_index":	Number,
-	    "visibility": {
-		"Public":	null,
-	    },
+	    "visibility":	"Public",
 	},
     },
     "entry_hash":		EntryHash,

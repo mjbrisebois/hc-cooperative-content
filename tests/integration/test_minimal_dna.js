@@ -156,7 +156,7 @@ describe("Minimal DNA", function () {
     before(async function () {
 	this.timeout( 300_000 );
 
-	await holochain.install([
+	const installations		= await holochain.install([
 	    "alice",
 	    "bobby",
 	], [
@@ -174,8 +174,11 @@ describe("Minimal DNA", function () {
 	    "logging": process.env.LOG_LEVEL || "fatal",
 	});
 
-	alice_client			= await client.app( "test-alice" );
-	bobby_client			= await client.app( "test-bobby" );
+	const alice_token		= installations.alice.test.auth.token;
+	alice_client			= await client.app( alice_token );
+
+	const bobby_token		= installations.bobby.test.auth.token;
+	bobby_client			= await client.app( bobby_token );
 
 	// Must call whoami on each cell to ensure that init has finished.
 	{
