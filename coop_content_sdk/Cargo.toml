@@ -1,6 +1,6 @@
 [package]
 name = "hc_coop_content_sdk"
-version = "0.4.0"
+version = "0.4.1"
 authors = ["Matthew Brisebois <matthew.brisebois@holo.host>"]
 edition = "2018"
 license = "CAL-1.0"
@@ -13,6 +13,6 @@ name = "coop_content_sdk"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-hc_coop_content_types = { version = "0.3", path = "../coop_content_types" }
+hc_coop_content_types = { version = "0.3.1", path = "../coop_content_types" }
 serde = "1"
 whi_hdk_extensions = "0.8.1"

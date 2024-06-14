@@ -809,7 +809,7 @@ checksum = "290f1a1d9242c78d09ce40a5e87e7554ee637af1351968159f4952f028f75604"
 
 [[package]]
 name = "hc_coop_content_sdk"
-version = "0.4.0"
+version = "0.4.1"
 dependencies = [
  "hc_coop_content_types",
  "serde",
@@ -818,7 +818,7 @@ dependencies = [
 
 [[package]]
 name = "hc_coop_content_types"
-version = "0.3.0"
+version = "0.3.1"
 dependencies = [
  "rmpv",
  "serde",
